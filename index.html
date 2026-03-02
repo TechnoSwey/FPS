@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mobile FPS Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="info">Передвиньтесь к красному кубу и выстрелите в него (Tap на правую половину экрана).</div>
+    
+    <!-- Холст для Three.js -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Виртуальный джойстик движения (левый) -->
+    <div id="move-joystick" class="joystick left">
+        <div class="joystick-handle" id="move-handle"></div>
+    </div>
+
+    <!-- Область прицеливания и стрельбы (правая) -->
+    <div id="aim-area" class="aim-area">
+        <div id="crosshair">+</div>
+    </div>
+
+    <!-- Подключаем Three.js и скрипты -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
